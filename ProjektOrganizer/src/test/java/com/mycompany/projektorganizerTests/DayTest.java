@@ -4,11 +4,11 @@
  */
 package com.mycompany.projektorganizerTests;
 
-import com.mycompany.projektorganizer.Day;
-import org.junit.jupiter.api.Test;
+import com.mycompany.projektorganizer.model.Day;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.CsvSource;
+
 
 /**
  *
@@ -16,11 +16,14 @@ import org.junit.jupiter.params.provider.ValueSource;
  */
 public class DayTest {
     
-    private Day testDay;
-    
+    private Day testDay = new Day();
+ 
     @ParameterizedTest
-    @ValueSource(strings = {"9:00", "Kino"})
+    @CsvSource(value = {"9:00-Kino", "11:00-Fryzjer"}, delimiter ='-')
     public void setEventTest(String hour, String eventName)
     {
+       testDay.setEvent(hour, eventName);
+       assertEquals(testDay.getEvent().getHour(), hour, "Hour incorrect assigned");
+       assertEquals(testDay.getEvent().getName(), eventName, "Event name incorrect assigned");
     }
 }

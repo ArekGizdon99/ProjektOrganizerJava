@@ -1,6 +1,9 @@
+com\mycompany\projektorganizer\LambdaExpression.class
+com\mycompany\projektorganizer\LambdaExpression$EditName.class
 com\mycompany\projektorganizer\DaysList.class
 com\mycompany\projektorganizer\View.class
 com\mycompany\projektorganizer\Controller.class
+com\mycompany\projektorganizer\IsEmptyException.class
 com\mycompany\projektorganizer\Event.class
 com\mycompany\projektorganizer\Day.class
 com\mycompany\projektorganizer\Main.class

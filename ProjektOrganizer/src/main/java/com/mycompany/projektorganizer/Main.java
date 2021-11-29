@@ -4,6 +4,10 @@
  */
 package com.mycompany.projektorganizer;
 
+import com.mycompany.projektorganizer.controller.Controller;
+import com.mycompany.projektorganizer.model.DaysList;
+import com.mycompany.projektorganizer.view.View;
+
 
 /**
  *Main class of the Organizer application. 
@@ -19,6 +23,8 @@ public class Main {
         */
         public static void main (String[] args)
         {
+            
+            
             DaysList model = new DaysList();
             View view = new View();
             Controller controller = new Controller(model, view);

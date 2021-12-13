@@ -41,7 +41,7 @@ public class DaysListTest {
     public void addToDaysTest(String hour, String eventName, String dateString)
     {
          Day testDay = new Day();
-         testDay.setEvent(hour, eventName);
+         testDay.addEvent(hour, eventName);
          testDay.setDate(dateString);
          testDaysList.addToDays(testDay);
         
@@ -62,7 +62,7 @@ public class DaysListTest {
     {
         for (int i =0; i<2;i++){
          Day testDay = new Day();
-         testDay.setEvent(hour, eventName);
+         testDay.addEvent(hour, eventName);
          testDay.setDate(dateString);
          testDaysList.addToDays(testDay);
         }

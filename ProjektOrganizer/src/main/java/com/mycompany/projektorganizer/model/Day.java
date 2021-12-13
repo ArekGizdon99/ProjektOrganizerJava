@@ -61,7 +61,7 @@ public class Day {
     * @param hour hour of event.
     * @param name name of event.
     */  
-    public void setEvent(String hour, String name){
+    public void addEvent(String hour, String name){
         event.setHour(hour);
         event.setName(name);
         events.add(event);

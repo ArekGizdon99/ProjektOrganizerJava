@@ -5,7 +5,8 @@
 package com.mycompany.projektorganizer;
 
 /**
- *
+ *Lambda expression class
+ * 
  * @author Arek
  */
 public class LambdaExpression {

@@ -7,6 +7,8 @@ package com.mycompany.projektorganizer;
 import com.mycompany.projektorganizer.controller.Controller;
 import com.mycompany.projektorganizer.model.DaysList;
 import com.mycompany.projektorganizer.view.View;
+import java.util.Locale;
+import javax.swing.JFrame;
 
 
 /**
@@ -23,29 +25,34 @@ public class Main {
         */
         public static void main (String[] args)
         {
-            
-            
-            DaysList model = new DaysList();
-            View view = new View();
-            Controller controller = new Controller(model, view);
-            
-            if(args.length == 0){
-            controller.addUserName();
+
+             java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GUI().setVisible(true);
             }
-            else{
-            model.setUserName(args[0]);
-            }
+        });
             
-            while(true)
-            {
-              try{
-              controller.createMenu();
-              }
-              catch(Exception e)
-              {
-                  view.printBadName();
-              }
-            }          
+//            DaysList model = new DaysList();
+//            View view = new View();
+//            Controller controller = new Controller(model, view);
+//            
+//            if(args.length == 0){
+//            controller.addUserName();
+//            }
+//            else{
+//            model.setUserName(args[0]);
+//            }
+//            
+//            while(true)
+//            {
+//              try{
+//              controller.createMenu();
+//              }
+//              catch(Exception e)
+//              {
+//                  view.printBadName();
+//              }
+//            }          
         } 
     }
 

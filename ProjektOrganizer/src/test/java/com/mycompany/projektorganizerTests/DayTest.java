@@ -22,7 +22,7 @@ public class DayTest {
     @CsvSource(value = {"9:00-Kino", "11:00-Fryzjer"}, delimiter ='-')
     public void setEventTest(String hour, String eventName)
     {
-       testDay.setEvent(hour, eventName);
+       testDay.addEvent(hour, eventName);
        assertEquals(testDay.getEvent().getHour(), hour, "Hour incorrect assigned");
        assertEquals(testDay.getEvent().getName(), eventName, "Event name incorrect assigned");
     }

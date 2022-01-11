@@ -1,0 +1,7 @@
+com\mycompany\projektorganizerweb\exeptions\IsEmptyException.class
+com\mycompany\projektorganizerweb\model\DaysList.class
+com\mycompany\projektorganizerweb\servlets\summaryViewServlet.class
+com\mycompany\projektorganizerweb\servlets\eventsAddServlet.class
+com\mycompany\projektorganizerweb\model\Event.class
+com\mycompany\projektorganizerweb\model\Day.class
+com\mycompany\projektorganizerweb\servlets\organizerViewServlet.class

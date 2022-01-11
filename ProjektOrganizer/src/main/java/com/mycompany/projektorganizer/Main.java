@@ -4,6 +4,7 @@
  */
 package com.mycompany.projektorganizer;
 
+import com.mycompany.projektorganizer.GUI.GUI;
 import com.mycompany.projektorganizer.controller.Controller;
 import com.mycompany.projektorganizer.model.DaysList;
 import com.mycompany.projektorganizer.view.View;

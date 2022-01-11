@@ -27,36 +27,38 @@
 'ProjektOrganizer 1.0-SNAPSHOT API'
 com.mycompany.projektorganizer.controller
 com.mycompany.projektorganizer.exeptions
+com.mycompany.projektorganizer.GUI
 com.mycompany.projektorganizer
 com.mycompany.projektorganizer.model
 com.mycompany.projektorganizer.view
 'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/controller/Controller.java'
 'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/exeptions/IsEmptyException.java'
+'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/GUI/GUI.java'
 'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/LambdaExpression.java'
 'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/Main.java'
 'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/model/Day.java'
 'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/model/DaysList.java'
 'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/model/Event.java'
 'C:/Users/Arek/Documents/GitHub/JavaLab/ProjektOrganizer/src/main/java/com/mycompany/projektorganizer/view/View.java'
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\src\main\java = 1638215451396
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\allclasses-index.html = 1638270630085
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\allclasses.html = 1638270630094
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\allpackages-index.html = 1638270630086
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\constant-values.html = 1638270629973
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\deprecated-list.html = 1638270630092
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\element-list = 1638270629936
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\help-doc.html = 1638270630103
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\index-all.html = 1638270630080
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\index.html = 1638270630098
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\member-search-index.js = 1638270630075
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\member-search-index.zip = 1638270630079
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\overview-summary.html = 1638270630100
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\overview-tree.html = 1638270630039
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\package-search-index.js = 1638270630053
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\package-search-index.zip = 1638270630071
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\script.js = 1638270630107
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\search.js = 1638270630109
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\serialized-form.html = 1638270629980
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\stylesheet.css = 1638270630105
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\type-search-index.js = 1638270630073
-C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\type-search-index.zip = 1638270630074
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\src\main\java = 1640084885294
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\allclasses-index.html = 1640085061877
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\allclasses.html = 1640085061886
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\allpackages-index.html = 1640085061879
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\constant-values.html = 1640085061755
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\deprecated-list.html = 1640085061884
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\element-list = 1640085061721
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\help-doc.html = 1640085061897
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\index-all.html = 1640085061871
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\index.html = 1640085061891
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\member-search-index.js = 1640085061868
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\member-search-index.zip = 1640085061869
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\overview-summary.html = 1640085061893
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\overview-tree.html = 1640085061830
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\package-search-index.js = 1640085061852
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\package-search-index.zip = 1640085061865
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\script.js = 1640085061902
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\search.js = 1640085061905
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\serialized-form.html = 1640085061764
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\stylesheet.css = 1640085061901
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\type-search-index.js = 1640085061866
+C:\Users\Arek\Documents\GitHub\JavaLab\ProjektOrganizer\target\site\apidocs\type-search-index.zip = 1640085061867

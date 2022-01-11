@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projekt organizer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Organizer</h1>
+        
+        <form action="AddingEvent">
+            <p> Nazwa wydarzenia: <input type="text" size ="20" name ="eventName"></p>
+            <p> Data wydarzenia: <input type="text" size ="20" name ="eventDate"></p>
+            <p> Godzina wydarzenia: <input type="text" size ="20" name ="eventHour"></p>
+            <input type="submit" value="Dodaj"/>
+        </form>
+        <hr>
+        <form action="OrganizerView">
+            <input type="submit" value="Wyswietl liste"/>
+        </form>
+        <hr>
+        <form action="SummaryView">
+            <input type="submit" value="Wyswietl podsumowanie"/>
+        </form>
+    </body>
+</html>

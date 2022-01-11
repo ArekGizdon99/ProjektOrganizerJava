@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.projektorganizer;
+package com.mycompany.projektorganizer.GUI;
 
-import com.mycompany.projektorganizer.controller.Controller;
+import com.mycompany.projektorganizer.LambdaExpression;
+import com.mycompany.projektorganizer.exeptions.IsEmptyException;
+import com.mycompany.projektorganizer.model.Day;
 import com.mycompany.projektorganizer.model.DaysList;
-import com.mycompany.projektorganizer.view.View;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.AbstractTableModel;
-
 
 /**
  *
@@ -18,16 +18,27 @@ import javax.swing.table.AbstractTableModel;
 public class GUI extends javax.swing.JFrame {
 
     DaysList model;
-    View view;
-    Controller controller;
+
     /**
      * Creates new form NewJFrame
      */
     public GUI() {
-         model = new DaysList();
-         view = new View();
-         controller = new Controller(model, view);
+        model = new DaysList();
         initComponents();
+    }
+
+    /**
+     * Add day to organizer.
+     *
+     * @param eventName event name
+     * @param hour event hour
+     * @param date event date
+     */
+    public void addToOrganizer(String eventName, String hour, String date) {
+        Day day = new Day();
+        day.addEvent(hour, eventName);
+        day.setDate(date);
+        this.model.addToDays(day);
     }
 
     /**
@@ -52,8 +63,14 @@ public class GUI extends javax.swing.JFrame {
         addBtn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Nazwa:");
@@ -137,12 +154,20 @@ public class GUI extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("Podsumowanie");
 
+        nameLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        nameLabel.setText("Użytkownik: ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(127, 127, 127)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -159,13 +184,8 @@ public class GUI extends javax.swing.JFrame {
                                 .addGap(67, 67, 67)
                                 .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(58, 58, 58)
-                        .addComponent(addBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(118, Short.MAX_VALUE))
+                        .addComponent(addBtn)))
+                .addContainerGap(121, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,7 +194,10 @@ public class GUI extends javax.swing.JFrame {
                         .addGap(356, 356, 356))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(338, 338, 338))))
+                        .addGap(338, 338, 338))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,7 +206,9 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                .addGap(3, 3, 3)
+                .addComponent(nameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -206,31 +231,89 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    
-    public void summaryToTable(DaysList daysList){  
-        DefaultTableModel tblModel = (DefaultTableModel)summaryTable.getModel();
+    /**
+     * Generate summary in summary table
+     *
+     * @param daysList list of days in organizer
+     */
+    public void summaryToTable(DaysList daysList) {
+        DefaultTableModel tblModel = (DefaultTableModel) summaryTable.getModel();
         tblModel.setRowCount(0);
-        for (int i = 0; i < daysList.getDays().size(); i++) 
-        {
-            String data[] = {daysList.getDays().get(i).getDate(), String.valueOf(daysList.getDays().get(i).getEvents().size())};        
+        for (int i = 0; i < daysList.getDays().size(); i++) {
+            String data[] = {daysList.getDays().get(i).getDate(), String.valueOf(daysList.getDays().get(i).getEvents().size())};
             tblModel.addRow(data);
         }
     }
-    
+
+    /**
+     * Read informations about added event
+     * @param evt event arg
+     */
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
 
-        String data[] = {txtName.getText(), txtDate.getText(), txtHour.getText()};
-        DefaultTableModel tblModel = (DefaultTableModel)eventsTable.getModel();
-        tblModel.addRow(data);
-        controller.addToOrganizerJFrame(txtName.getText(), txtHour.getText(), txtDate.getText());
-        txtName.setText("");
-        txtDate.setText("");
-        txtHour.setText("");
-        summaryToTable(model);
+        if (txtName.getText().equals("") || txtDate.getText().equals("") || txtHour.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Wpisz wszystkie dane", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            String data[] = {txtName.getText(), txtDate.getText(), txtHour.getText()};
+            DefaultTableModel tblModel = (DefaultTableModel) eventsTable.getModel();
+            tblModel.addRow(data);
+            addToOrganizer(txtName.getText(), txtHour.getText(), txtDate.getText());
+            txtName.setText("");
+            txtDate.setText("");
+            txtHour.setText("");
+            summaryToTable(model);
+        }
     }//GEN-LAST:event_addBtnActionPerformed
-
+/**
+ * Function add user name
+ * @param name user name
+ * @return false if add name passed
+ * @throws IsEmptyException  exception when user name was not typed
+ */
+    private boolean addUserName(String name) throws IsEmptyException {
+        LambdaExpression lambda = new LambdaExpression();
      
+        if ((name != null) && (name.length() > 0)) {
+            LambdaExpression.EditName upFirstLetter = string -> (string.substring(0, 1).toUpperCase() + string.substring(1));
+            nameLabel.setText(nameLabel.getText() + lambda.operationOnString(name, upFirstLetter));
+            model.setUserName(name);
+            return false;
+        } else {
+         
+            throw new IsEmptyException("User name is not set");
+        }
+    }
+
+/**
+ * Displays a window that asks the user's name
+ * @param evt event args
+ */
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+
+        boolean incorrectNameAdded = true;
+
+        while (incorrectNameAdded) {
+            String name = (String) JOptionPane.showInputDialog(
+                    this,
+                    "Podaj swoje imię:",
+                    "Imie użytkownika",
+                    JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    null,
+                    "imie");
+
+            try {
+                incorrectNameAdded = addUserName(name);
+            } catch (IsEmptyException e) {
+                JOptionPane.showMessageDialog(
+                        this,
+                        "Nie podano nazwy użytkownika",
+                        "Spróbuj ponownie",
+                        JOptionPane.ERROR_MESSAGE);
+                incorrectNameAdded = true;
+            }
+        }
+    }//GEN-LAST:event_formWindowOpened
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -243,6 +326,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JTable summaryTable;
     private javax.swing.JTextField txtDate;
     private javax.swing.JTextField txtHour;

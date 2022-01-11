@@ -79,15 +79,7 @@ public class Controller {
             this.model.addToDays(day);
         }
     
-    public void addToOrganizerJFrame(String eventName, String hour, String date)
-    {
-        Day day = new Day();
-         day.addEvent(hour, eventName);
-         day.setDate(date);
-            
-         this.model.addToDays(day);
-    }
-    
+
     /**
      * Create user menu.
      * 

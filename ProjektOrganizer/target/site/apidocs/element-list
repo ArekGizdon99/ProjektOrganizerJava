@@ -1,5 +1,6 @@
 com.mycompany.projektorganizer
 com.mycompany.projektorganizer.controller
 com.mycompany.projektorganizer.exeptions
+com.mycompany.projektorganizer.GUI
 com.mycompany.projektorganizer.model
 com.mycompany.projektorganizer.view
